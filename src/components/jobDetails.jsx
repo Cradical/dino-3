@@ -1,15 +1,13 @@
 import React from 'react';
-import InputField from './inputField'
 
 const JobDetails = (props) => {
-    console.log('props: ', props)
+    console.log('props: ', props.data.title)
     return(
-        <main>
+        <div>
             <h2>Job Details</h2>
-            <h4>{props.title}</h4>
-            <p>{props.description}</p>
-            <InputField />
-        </main>
+            <h4>{props.data.title}</h4>
+            <p>{props.data.description}</p>
+        </div>
     )
 }
 
