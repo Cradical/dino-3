@@ -1,7 +1,6 @@
 import React from 'react';
 
 const JobDetails = (props) => {
-    console.log('props: ', props.data.title)
     return(
         <div>
             <h2>Job Details</h2>

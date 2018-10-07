@@ -11,7 +11,7 @@ class InputField extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-            this.props.onSubmit()
+        this.props.onSubmit()
         }
 
     render() {
@@ -19,10 +19,10 @@ class InputField extends Component {
         <div>
                 <form onSubmit={(event) => this.handleSubmit(event)} id="application-input">
                     <label>Apply Here:</label>
-                    <textarea id="application-text" rows="8" cols="100" onChange={this.props.onInput}></textarea>
+                    <textarea id="application-text" rows="8" cols="100" value={this.props.value} onChange={this.props.onInput}></textarea>
                     <input id="submit" type="submit" value="Submit"></input>
+                    {this.props.msg_Display ? <p>Your application was submitted!</p> : null } 
                 </form>
-                <p>display message</p>  
         </div>
         )
     }
