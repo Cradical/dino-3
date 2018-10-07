@@ -40,21 +40,19 @@ class App extends Component {
       msg_Display : !this.submit_msg_Display,
       text: ""
     })
-    console.log(this.state.msg_Display)
-    console.log('text: ', this.state.text)
   }
 
   render() {
     return (
       <div>
         <Header />
-      <main>
-        <JobDetails data={ this.state.data }/>
-        <InputField value={this.state.text} onInput={ this.inputValue } onSubmit={this.onSubmit} msg_Display={this.state.msg_Display}/>
-        <button id="application-toggle" onClick={this.togglePreviewBox}>Show Preview</button>
-        {!this.state.isHidden ? <Preview value={ this.state.text }/> : null }
+        <main>
+          <JobDetails data={ this.state.data }/>
+          <InputField value={this.state.text} onInput={ this.inputValue } onSubmit={this.onSubmit} msg_Display={this.state.msg_Display}/>
+          <button id="application-toggle" onClick={this.togglePreviewBox}>Show Preview</button>
+          {!this.state.isHidden ? <Preview value={ this.state.text }/> : null }
+        </main>  
         <Footer />
-      </main>  
       </div>
     );
   }
